@@ -1,0 +1,22 @@
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    margin: 20px auto;
+    background: #080b10;
+    border: 1px solid #354154;
+    border-radius: 12px;
+}
+
+#stopButton:disabled,
+#startButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#cameraStatus,
+#faceStatus {
+    margin-top: 16px;
+    overflow-wrap: anywhere;
+}
