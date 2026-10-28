@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveGuard | MOSIP Decode</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>LiveGuard</h1>
+        <p>Privacy-Aware Face Liveness Workflow Prototype</p>
+
+        <section class="panel">
+            <h2>Camera and Face Detection</h2>
+            <p>Allow camera access to begin.</p>
+
+            <video id="webcam" autoplay playsinline muted></video>
+            <canvas id="canvas" hidden></canvas>
+
+            <div>
+                <button id="startButton">Start Camera</button>
+                <button id="stopButton" disabled>Stop Camera</button>
+            </div>
+
+            <p id="cameraStatus">Camera is stopped.</p>
+            <p id="faceStatus">Face detection has not started.</p>
+
+            <hr>
+
+            <h2>Guided Liveness Challenge</h2>
+            <p id="challengeStatus">
+                Start the camera to begin the challenge.
+            </p>
+
+            <p id="challengeNote">
+                Follow the instructions displayed here.
+            </p>
+
+            <button id="challengeButton" disabled>
+                Start Challenge
+            </button>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
